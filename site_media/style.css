@@ -1,0 +1,421 @@
+/******************************
+   Emrah Tokalak - Alemgir
+     emrah@alemgir.com
+     hasan@alemgir.com
+
+*******************************/
+
+/* Sağ üst navigasyon paneli için*/
+#nav {
+	 float: right; 
+font-family: helvetica;
+background-color:#7AA13D;
+border-color:#1D4088 #1D4088 -moz-use-text-color;
+border-style:solid solid none;
+border-width:1px 1px 0;
+font-size:18px;
+height:23px;
+margin-right: 160px;
+top: 5px;
+	}
+ 
+
+  
+
+  
+.header { 
+  margin:0 auto;     /* sağdan soldan sıfırlıyor arkadaş :)  */
+  margin-top: 5px; 
+  width: 960px;  /* burada px değeri vermeseydim sola yaslayacaktı. */
+ 
+#hlogo {
+margin-top: 5px;
+float:left;
+height:75px;
+width:350px;
+}
+ 
+
+  
+  
+  } 
+ /*
+Anasayfa bileşenleri.
+*/ 
+
+body {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#E5ECF3 none repeat scroll 0 0;
+color:#393733;
+margin:0;
+padding:0 0px;
+text-align: left;
+
+}
+
+.icerik {
+	background-color:#ffffff;
+    border:1px solid #CCCCCC;
+    
+	margin:42px auto;
+    width: 960px;
+	font-family: Arial,Helvetica;
+	padding:4px;
+	
+   
+  }
+  
+#toolbox {
+	float: right;
+	position: relative;
+	margin-right: 30px;
+	margin-top: 0px;
+    font-family: helvetica;
+    background-color:#7AA13D;
+	
+}
+
+h2 {
+font-family:helvetica;
+font-size:170%;
+color: #105CB6;
+font-weight:bold;
+margin-left:40px;
+	
+}
+
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:110%;
+	color: #105CB6;
+	margin-left:40px;
+    font-weight:bold;
+
+}
+
+#bookmarks {
+	
+	position:relative;
+	font font-family: helvetica;
+    margin-left: 40px;
+	margin-right: 300px;
+	
+	}
+
+.paragraf {
+  color:gray;
+  font-size:1.1em;	
+  position: relative;
+  margin-left: 35px;
+}
+
+
+.cote-count {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#EEEEEE none repeat scroll 0 0;
+color:#555555;
+text-align:center;
+
+float:left;
+height:38px;
+margin:0 3px 0 0;
+padding:5px;
+width:38px;
+}
+
+
+#mainpage {
+	
+	position: relative;
+	font font-family: helvetica;
+    margin-left: 40px;
+	top: 10px;
+	}
+	
+/*
+sayfa sonlarındaki feed şesileri için :D
+*/	
+
+#feed-link {
+clear:both;
+float:right;
+position: relative;
+right: 10px;
+bottom:10px;
+text-align:right;
+
+}
+
+#feed-link-image {
+float:left;
+margin-left:12px;
+margin-right:5px;
+}
+#feed-link-text {
+float:left;
+}
+
+/*
+davetiye gönderildi gibi mesaj bildirimlerinin çıkması için
+*/
+ul.messages {
+  border: 1px dashed #000;    
+  margin: 1em 4em;
+  padding: 1em;
+}
+
+
+
+/*
+linklerin altı çizgili çıkmaması için
+*/
+a:link {color: black; text-decoration: none}
+a:visited {color: black; text-decoration: none}
+a:hover {color: purple; text-decoration:none}
+a:active {color: #ffffff;; text-decoration: none}
+a:focus  { text-decoration: none}
+a: { cursor:pointer;
+     outline-style:none;}
+
+
+
+
+
+/*
+FOOTERRRRRR hırrr :)
+*/
+
+.footer {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#777777 none repeat scroll 0 0;
+border-top:7px solid #000000;
+clear:both;
+color:#444444;
+margin-top:30px;
+padding:15px;
+text-align:center;
+font-family:Arial,Liberation Sans,DejaVu Sans,sans-serif;
+line-height:1;
+
+
+
+}
+
+.container {
+margin:0 auto;
+text-align:left;
+width: 960px;
+}
+
+#footer-menu {
+color:#999999;
+float:left;
+font-size:100%;
+line-height:30px;
+}
+
+#footer-menu a {
+color:#FFFFFF;
+}
+
+#footer-flair {
+float:right;
+margin-left:12px;
+}
+#svnrev {
+margin-top:5px;
+text-align:right;
+}
+#copyright {
+clear:both;
+}
+#copyright a {
+color:#444444;
+text-decoration:underline;
+}
+
+
+
+
+
+/* Yer imi kaydetme sayfasının kaydetme yeri için */
+
+
+input {
+   display:block;
+  
+   }
+/* yerimlerini sıralamak için*/   
+ul.tags, ul.tags li {
+  display: inline;
+  margin: 0;
+  
+  padding: 0;
+}
+
+/* Etiket Blutu */
+
+#tag-cloud {
+  text-align: center;
+}
+#tag-cloud a {
+  margin: 0 0.2em;
+}
+.tag-cloud-0 { font-size: 100%; }
+.tag-cloud-1 { font-size: 120%; }
+.tag-cloud-2 { font-size: 140%; }
+.tag-cloud-3 { font-size: 160%; }
+.tag-cloud-4 { font-size: 180%; }
+.tag-cloud-5 { font-size: 200%; }
+
+
+
+	  
+
+/*
+commentler ile ilgili herşey
+*/	  
+.comment {
+	
+	background-color:#F2F2F2;
+    border:1px solid #CCCCCC;
+    margin-top:1em;
+	margin-left: 40px;
+    padding:4px;
+	width: 500px;
+	color:#000000;
+    font-family: Arial,Helvetica;
+	}
+	
+.comment-form {
+	
+	position:relative;
+	font font-family: helvetica;
+    margin-left: 40px;
+	margin-right: 100px;
+}
+
+.form-submit cbt {
+position: relative;
+padding:10px 0 15px;
+width: 200px;
+}
+	
+
+    
+/** PAGINATOR **/
+.paginator { padding:.5em .75em; float:left; font:normal .8em arial; }
+ 
+.paginator .prev-na,
+.paginator .next-na {
+	padding:.3em;
+	font:bold .875em arial;
+}
+ 
+.paginator .prev-na,
+.paginator .next-na {
+	border:1px solid #ccc;
+	background-color:#f9f9f9;
+	color:#aaa;
+	font-weight:normal;
+}
+ 
+.paginator .prev a, .paginator .prev a:visited,
+.paginator .next a, .paginator .next a:visited {
+	border:1px solid #c2ee62;
+	background-color:#edfdd0;
+	color:#234f32;
+	padding:.3em;
+	font:bold .875em arial;
+}
+ 
+.paginator .prev, .paginator .prev-na { margin-right:.5em; }
+.paginator .next, .paginator .next-na { margin-left:.5em; }
+ 
+.paginator .page a, .paginator .page a:visited, .paginator .curr {
+	padding:.25em;
+	font:normal .875em verdana;
+	border:1px solid #C2EE62;
+	background-color:#EDFDD0;
+	margin:0em .25em;	
+	color:#006000;
+}
+ 
+.paginator .curr { 
+	background-color:#234f32;
+	color:#fff;
+	border:1px solid #234f32;
+	font-weight:bold;
+	font-size:1em;
+}
+ 
+.paginator .page a:hover,
+.paginator .curr a:hover,
+.paginator .prev a:hover,
+.paginator .next a:hover {
+	color:#fff;
+	background-color:#234f32;
+	border:1px solid #234f32;
+}
+
+
+
+
+/*
+Auto complete özelliğinin
+*/
+
+.ac_results {
+	padding: 0px;
+	border: 1px solid black;
+	background-color: white;
+	overflow: hidden;
+	z-index: 99999;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font: menu;
+	font-size: 12px;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.ac_loading {
+	background: white url('indicator.gif') right center no-repeat;
+}
+
+.ac_odd {
+	background-color: #eee;
+}
+
+.ac_over {
+	background-color: #0A246A;
+	color: white;
+}

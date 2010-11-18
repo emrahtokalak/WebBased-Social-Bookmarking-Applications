@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans 'Anasayfa' %}{% endblock %}
+<div id="mainpage">
+{% block head %}<h3>{% trans 'Sosyal imleme dünyası!'%}</h3>{% endblock %}
+{% block content %}
+<div class="paragraf">
+    {% if user.username %}
+       <p> Hoş geldin {{ user.username }}!
+         Yeni ekle özelliğini kullanarak hemen paylaşıma başlayabilir ve yerimlerini kolayca saklayabilirsin. Paylaşımı yaparken "anasaya'da paylaş" diyerek
+		 tüm kullanıcılarla paylaşabilirsiniz ve isterseniz paylaşımı yapan kişileri arkadaş olarak ekleyebilirsiniz.</p>
+		
+    {% else %}
+        <p>{% trans 'Hoş geldin, Seni tanıyamadım !' %}
+        Önce <a href="/login/">{% trans 'Giriş' %}</a>{% trans ' yap, Ardından kolayca yerimlerini saklayıp, paylaşabilirsin.' %}</p>
+    {% endif %}
+</div>
+    <h2>{% trans 'Haber, Resim, Video' %}</h2>
+	
+    {% include 'shared_bookmark_list.html' %}
+ </div>
+{% endblock %}

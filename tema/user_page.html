@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block external %}
+     <script type="text/javascript" src="/site_media/bookmark_edit.js"></script>
+     <link rel="alternate" type="application/rss+xml"
+                                 title="LikedFeed | 
+                                 {{ username }}{% trans 'kişisinin yerimleri' %} "
+                                 href="/feeds/user/{{ username }}" />
+{% endblock %}
+{% block title %}{{ username }}{% endblock %}
+{% block head %} <h2>{{ username }}{% trans ' dostum, seninkiler;' %}</h2>{% endblock %}
+{% block content %}
+   <div id="toolbox">
+   
+   {% ifequal user.username username %}
+     <a href="/friends/{{ username }}/">{% trans 'arkadaşlarını gör' %}</a>
+	 <p><a href="/password_change/">{% trans 'şifreni değiştir' %}</a></p>
+   {% else %}
+     {% if is_friend %}
+	       <a href="/friends/{{ user.username }}/"> {{ username }}{% trans 'ile arkadaşsın.' %}</a>
+     {% else %}
+	     <a href="/friends/add/?username={{ username }}/"> {{ username }}'{% trans 'yı arkadaş ekle' %}</a>  
+	 {% endif %}
+	     <a href="/friends/{{ username }}/"> {{ username }}'{% trans 'nin arkadaşları' %}</a> 
+   {% endifequal %}
+   
+   </div>
+   {% include "bookmark_list.html" %}
+   <div id="feed-link">
+    <div id="feed-link-image"><a title="son 20 paylaşım" href="/feeds/user/{{ username }}"><img width="12" height="12" alt="feed icon" src="/site_media/49.png"></a></div>
+    <div id="feed-link-text"><a title="son 20 paylaşım" href="/feeds/user/{{ username }}">{% trans 'bu kullanıcıyı takip et' %}</a></div>
+</div>
+{% endblock %}

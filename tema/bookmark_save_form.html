@@ -1,0 +1,5 @@
+{% load i18n %}
+<form id="save-form" method="post" action="/save/">
+   {{ form.as_p }}
+   <input type="submit" value="{% trans 'kaydet' %}" />
+</form> 

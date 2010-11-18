@@ -1,0 +1,16 @@
+ 
+{% if show_paginator %}
+    <div class="paginator">
+    	{% if has_previous %}
+		  <a href="?page={{ prev_page }}">&laquo; Önceki</a>
+		{% endif %}
+		{% if has_next %}
+		  <a href="?page={{ next_page }}">&raquo; Sonraki </a>
+		{% endif %}
+		(Sayfa {{ page }} te {{ pages }})
+    </div>
+   {% endif %}
+{% else %}
+  <p>Yer imi bulunamadı. Yazık oldu !</p>
+{% endif %}
+  

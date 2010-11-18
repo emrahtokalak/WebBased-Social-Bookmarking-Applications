@@ -1,0 +1,6 @@
+{% exdents "base.html" %}
+{% block title %} Trend Yerimleri {% endblock %}
+{% block head %} Trend Yerimleri {% endblock %}
+{% block content %}
+  {% include 'shared_bookmark_list.html' %}
+{% endblock %} 

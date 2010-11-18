@@ -1,0 +1,64 @@
+/******************************
+   Emrah Tokalak - Alemgir
+     emrah@technofeed.net
+
+*******************************/
+
+/* Sağ üst navigasyon paneli için*/
+#nav {
+  float: right;
+  font-family: helvetica;
+  background-color: #F7941D;
+  color: #FFFFFF;
+  border: 4px solid #092E20;
+  width: auto;
+  top: 10px;
+  } 
+/* Yer imi kaydetme sayfasının kaydetme yeri için */
+input {
+   display:block;
+  
+   }
+/* yerimlerini sıralamak için*/   
+ul.tags, ul.tags li {
+  display: inline;
+  margin: 0;
+  
+  padding: 0;
+}
+
+/* Etiket Blutu */
+
+#tag-cloud {
+  text-align: center;
+}
+#tag-cloud a {
+  margin: 0 0.2em;
+}
+.tag-cloud-0 { font-size: 100%; }
+.tag-cloud-1 { font-size: 120%; }
+.tag-cloud-2 { font-size: 140%; }
+.tag-cloud-3 { font-size: 160%; }
+.tag-cloud-4 { font-size: 180%; }
+.tag-cloud-5 { font-size: 200%; }
+
+#register {
+ position: relative;
+ left: 10px;
+ top: 10px;
+ background-color: #8ABAF5;
+  }
+
+ul.bookmarks .edit {
+	  font-size: 70%;
+	  
+	  }
+	  
+.comment {
+	margin: 1em;
+	padding:  5px;
+	border: 1px solid #000;
+	}
+    
+#mainpage {
+	font font-family: helvetica;

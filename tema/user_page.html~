@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block external %}
+     <script type="text/javascript" src="/site_media/bookmark_edit.js"></script>
+     <link rel="alternate" type"application/rss+xml"
+                                 title="LikedFeed | 
+                                 {{ username }} kişisinin yerimleri "
+                                 href="/feeds/user/{{ username }}" />
+ {% endblock %}
+{% block title %}{{ username }}{% endblock %}
+{% block head %} {{ username }} dostum, seninkiler;{% endblock %}
+{% block content %}
+   {% include "bookmark_list.html" %}
+{% endblock %}

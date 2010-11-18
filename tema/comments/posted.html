@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Yorumunuz için teşekkürler" %}.{% endblock %}
+
+{% block content %}
+  <p>{% trans "Yorumunuz için teşekkürler" %}.</p>
+  <a href="/bookmark/{{ comment.object_pk }}/">Yorum sayfasına git</a>
+{% endblock %}

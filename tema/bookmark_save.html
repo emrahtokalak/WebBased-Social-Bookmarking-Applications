@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block external %}
+  <link rel="stylesheet" href="jquery.autocomplete.css" type="text/css"/>  
+  <script type="text/javascript"src="/site_media/jquery.dimensions.js"></script> 
+  <script type="text/javascript"src="/site_media/jquery.bgiframe.min.js"></script>
+  <script type="text/javascript"src="/site_media/jquery.autocomplete.js"></script> 
+  <script type="text/javascript"src="/site_media/tag_autocomplete.js"></script> 
+{% endblock %}
+{% block title %}{% trans 'Yeni link ekle' %} {% endblock %}
+{% block head %}<h2>{% trans 'Yeni link ekle' %}</h2>{% endblock %}
+{% block content %} 
+{% include 'bookmark_save_form.html' %}
+{% endblock %} 

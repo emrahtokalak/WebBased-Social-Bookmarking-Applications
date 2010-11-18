@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Kullanıcı Kaydı{% endblock %}
+{% block head %}Kullanıcı Kaydı{% endblock %}
+{% block content %}
+<div id="register">
+<form method="post" action=".">
+  {{ form.as_p }}
+  <input type="submit" value="Bitir şu işi" />
+</form>
+</div>
+{% endblock %} 

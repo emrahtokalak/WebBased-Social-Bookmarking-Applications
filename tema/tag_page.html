@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans 'Etiket:' %}{{ tag_name|escape }}{% endblock %}
+{% block head %} 
+  {% trans 'Etiketlenen /tag'lanan:' %} {{ tag_name|escape }}
+{% endblock %}
+{% block content %}
+  {% include 'bookmark_list.html' %}
+{% endblock %}

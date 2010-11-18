@@ -1,0 +1,46 @@
+{% load i18n %}
+{% if shared_bookmarks %}
+ <div id="bookmarksana">
+  {% for shared_bookmark in shared_bookmarks %}
+        <ul>
+       	 {% if shared_bookmark.voted %}
+           <a href="/vote/?id={{ shared_bookmark.id }}"
+              class="vote"> <img src="/site_media/likebutton.png/" alt="beğen" />{% trans ' beğen' %} </a>     
+	     {% else %}
+            <a href="/vote/?id={{ shared_bookmark.id }}"
+              class="vote"> <img src="/site_media/likebutton.png/" alt="beğen" />{% trans ' puan' %} </a> 
+	     {% endif %} 
+		   
+           <span class="vote-count">{{ shared_bookmark.votes }}</span>
+           
+		   	<a href="{{ shared_bookmark.bookmark.link.url }}"
+              class="title" target="_blank"><strong>
+              {{ shared_bookmark.bookmark.title|escape }} </strong></a> 
+			 <br />
+	  
+           
+		   
+		   {% trans 'paylaşan:' %}
+           <a href="/user/{{ shared_bookmark.bookmark.user.username }}/"
+               class="username">
+             {{ shared_bookmark.bookmark.user.username }} - </a>
+			 
+		   <a href="/bookmark/{{ shared_bookmark.id }}/"> <strong>{% trans 'yorumlar' %}</strong></a>
+		    
+		  
+		   
+		   
+           
+		 </ul>
+                     
+         
+
+  {% endfor %}
+ {% else %}
+  <p>{% trans 'Yerimi Bulunamadı. Yazık !' %}</p> 
+ {% endif %}   
+  </div>
+ <div id="feed-link">
+    <div id="feed-link-image"><a title="son 20 paylaşım" href="/feeds/recent/"><img width="12" height="12" alt="feed icon" src="/site_media/49.png"></a></div>
+    <div id="feed-link-text"><a title="son 20 paylaşım" href="/feeds/recent/">{% trans 'bu sayfanın akışı' %}</a></div>
+</div>

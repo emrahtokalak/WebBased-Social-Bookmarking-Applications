@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load comments %} 
+{% block title %} Yer imi:
+    {{ shared_bookmark.bookmark.title|escape }} {% endblock %}
+{% block head %}
+   <a href="/vote/?id={{ shared_bookmark.id }}"
+      class="vote">[likeit]</a>
+   <a href="{{ shared_bookmark.bookmark.link.url }}"
+       class="title">
+    {{ shared_bookmark.bookmark.title|escape }}</a>
+{% endblock %}
+{% block content %}
+  Gönderen:
+  <a href="/user/{{ shared_bookmark.bookmark.user.username }}/"
+       class="username">
+    {{ shared_bookmark.bookmark.user.username }}</a> |
+  <span class="vote-count"> Beğeni: {{ shared_bookmark.votes }}</span>
+  <h2>Yorumlar</h2>
+  {% load markup %}
+   
+  {% get_comment_count for bookmarks.sharedbookmark shared_bookmark.id as comment_count %}
+  {% get_comment_list for bookmarks.sharedbookmark shared_bookmark.id as comment_list %}
+
+  
+  {% for comment in comment_list %}
+      <div class="comment">
+        <p><b>{{ comment.name }}</b> yazdı:</p>
+        {{ comment.comment|escape|urlizetrunc:40|linebreaks }}
+             {% ifequal user comment.user %}          <-### eğer giriş yapılan kullanıcı ile yorum yazan aynı ise...  ->
+               <a href="{% url comments-delete comment.id %}">yorumunu sil</a> 
+             {% else %}
+               <a href="{% url comments-flag comment.id %}">şikayet et</a>
+             {% endifequal %}
+
+         
+
+      </div>
+  {% endfor %}
+    <p> Toplam yorum: {{ comment_count }}  </p>
+     {% render_comment_form for bookmarks.sharedbookmark shared_bookmark.id %}
+ 
+{% endblock %}

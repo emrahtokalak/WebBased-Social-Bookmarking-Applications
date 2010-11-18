@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}LikedFeed - Çıkış{% endblock %}
+{% block head %}Çıkış Yapıldı.{% endblock %}
+{% load i18n %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="/">{% trans 'Anasayfa' %}</a></div>{% endblock %}
+
+{% block content %}
+
+<p>{% trans "Değerli zamanınızı ayırdığınız için minnettarız." %}</p>
+
+<p><a href="/login/">{% trans 'Tekrardan giriş yap' %}</a></p>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block external %}
+   <script type="text/javascript" src="/site_media/search.js">
+     </script>
+{% endblock %}
+{% block title %}{% trans 'Site içi arama' %} {% endblock %}
+{% block head %}{% trans 'Site içi arama' %}  {% endblock %}
+{% block content %}
+<form id="search-form" method="get" action=".">
+   {{ form.as_p }} <input type="submit" value="{% trans 'ara' %}" />
+</form>
+<div id="search-results">
+   {% if show_results %}
+     {% include 'bookmark_list.html' %}
+   {% endif %}
+</div>
+{% endblock %}

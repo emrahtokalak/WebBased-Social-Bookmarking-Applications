@@ -1,0 +1,12 @@
+{% load i18n %}
+<div class="header">
+  <div id="logo">
+  	<a href="/"><img width="350" height="75" alt="LikedFeed" src="/site_media/analogo.png"></a>
+            
+  </div>
+
+
+
+
+</div>
+ 

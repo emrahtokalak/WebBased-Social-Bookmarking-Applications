@@ -1,0 +1,8 @@
+<form action="/comments/post/" method="post">
+   
+    <textarea name="comment" rows="8" cols="60"></textarea></p>
+    <input type="hidden" name="options" value="{{ options }}" />
+    <input type="hidden" name="target" value="{{ target }}" /> 
+    <input type="hidden" name="gonzo" value="{{ hash }}" /> 
+    <input type="submit" name="post" value="yorumu gönder" /> 
+  </form> 

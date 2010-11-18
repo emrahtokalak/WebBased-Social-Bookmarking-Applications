@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans 'Etiket Bulutu' %}{% endblock %}
+{% block head %}{% trans 'Etiket Bulutu' %}{% endblock %}
+{% block context %}
+  <div id="tag-cloud">
+    {% for tag in tags %}
+      <a href="/tag/{{ tag.name|urlencode }}/"
+           class="tag-cloud-{{ tag.weight }}">
+          {{ tag.name|escape }}</a>
+    {% endfor %}
+  </div>
+{% endblock %} 

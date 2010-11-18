@@ -1,0 +1,52 @@
+{% if bookmarks %}
+ <ul class="bookmarks">
+   {% for bookmark in bookmarks %}
+     <li>
+       <a href="{{ bookmark.link.url|escape }}" class="title">
+          {{ bookmark.title|escape }} </a>
+       {% if show_edit %}
+          <a href="/save/?url={{ bookmark.link.url|urlencode }}"
+             class="edit">[düzenle]</a>   
+       {% endif %}
+       <br/>
+       {% if show_tags %}
+           Etiket/tags:
+           {% if bookmark.tag_set.all %}
+              <ul class="tags">
+                 {% for tag in bookmark.tag_set.all %}
+                   <li>
+                     <a href="/tag/{{ tag.name|urlencode }}/">
+                        {{ tag.name|escape }}</a>
+                   <li/>
+                 {% endfor %}
+              </ul>
+           {% else %}
+               Kocaman Bir Hiç !.
+           {% endif %}
+           <br />
+       {% endif %}
+       {% if show_user %}
+            Kayıt eden:
+            <a href="/user/ {{ bookmark.user.username }}/"
+            class="username">
+              {{ bookmark.user.username }}</a>
+       {% endif %}
+     </li>
+    {% endfor %}
+  </ul>
+  {% if show_paginator %}
+    <div class="paginator">
+    	{% if has_previous %}
+		  <a href="?page={{ prev_page }}">&laquo; Önceki</a>
+		{% endif %}
+		{% if has_next %}
+		  <a href="?page={{ next_page }}">&raquo; Sonraki </a>
+		{% endif %}
+		(Sayfa {{ page }} te {{ pages }})
+    </div>
+   {% endif %}
+{% else %}
+  <p>Yer imi bulunamadı. Yazık oldu !</p>
+{% endif %}
+  
+

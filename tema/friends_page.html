@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %} {{ username }}{% trans ' kişisinin arkadaşları' %} {% endblock %}
+{% block head %} {{ username }}{% trans ' kişisinin arkadaşları' %}{% endblock %}
+{% block content %}
+ <h2>{% trans 'Arkadaş listesi' %}</h2>
+ {% if friends %}
+   <ul class="friends">
+   	 {% for friend in friends %}
+	   <li><a href="/user/{{ friend.username }}/">
+	   	                  {{ friend.username }}</a></li>
+	 {% endfor %}
+   </ul>
+ {% else %}
+  <p>{% trans 'Hiç arkadaşınız yok. Sosyalleşin !' %}</p>
+ 
+ {% endif %}
+ <a href="/friend/invite/">{% trans 'Arkadaşını davet et!' %}</a>
+   <h2>{% trans 'Arkadaşlarının aktiviteleri' %}</h2>
+    {% include 'bookmark_list.html' %}
+{% endblock %}
+
+

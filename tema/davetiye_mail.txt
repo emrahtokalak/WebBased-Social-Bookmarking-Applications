@@ -1,0 +1,10 @@
+Merhaba {{ name }}
+
+{{ sender }} seni LikedFeed'e davet etti. LikedFeed ile linklerini, favorilerini paylaşıp,
+saklayabilir ve yorum yapabilirsin. Katılmak için linke tıklaman yeterli:
+
+{{ link }}
+
+---
+likedfeed geliştiricileri - Alemgir
+--- 

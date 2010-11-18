@@ -1,0 +1,70 @@
+{% load i18n %}
+{% if bookmarks %}
+   <div id="bookmarks">
+      {% for bookmark in bookmarks %}
+        <li>
+           <a href="{{ bookmark.link.url|escape }}" class="title" target="_blank">
+                  <strong> {{ bookmark.title|escape }} </strong></a>
+           {% if show_edit %}
+               <a href="/save/?url={{ bookmark.link.url|urlencode }}"
+                 class="edit">{% trans '[düzenle]' %}</a>   
+           {% endif %}
+	       {% if show_delete %}
+               <a href="/delete/?url={{ bookmark.link.url|urlencode }}"
+                  class="delete">{% trans '[sil]' %}</a>   <!-- burayı daha düzenlemedim -->
+           {% endif %}
+           <br/>
+           {% if show_tags %}
+           {% trans 'Etiket/tags:' %}
+           {% if bookmark.tag_set.all %}
+              <ul class="tags">
+                 {% for tag in bookmark.tag_set.all %}
+                   <li>
+                     <a href="/tag/{{ tag.name|urlencode }}/">
+                        {{ tag.name|escape }}</a>
+                   <li/>
+                 {% endfor %}
+              </ul>
+           {% else %}
+            {% trans 'Kocaman Bir Hiç !.' %}
+           {% endif %}
+           <br />
+           {% endif %}
+           {% if show_user %}
+             {% trans 'Kayıt eden:' %}
+               <a href="/user/ {{ bookmark.user.username }}/"
+                class="username">
+              {{ bookmark.user.username }}</a>
+           {% endif %}
+         </li>
+      {% endfor %}
+   </div>
+  {% if show_paginator %}
+   <div class="pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}{{ getvars }}" class="prev">&lsaquo;&lsaquo; önceki</a>
+    {% else %}
+        <span class="disabled prev">&lsaquo;&lsaquo; önceki</span>
+    {% endif %}
+    {% for page in pages %}
+        {% if page %}
+            {% ifequal page page_obj.number %}
+                <span class="current page">{{ page }}</span>
+            {% else %}
+                <a href="?page={{ page }}{{ getvars }}{{ hashtag }}" class="page">{{ page }}</a>
+            {% endifequal %}
+        {% else %}
+            ...
+        {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}{{ getvars }}" class="next">sonraki &rsaquo;&rsaquo;</a>
+    {% else %}
+        <span class="disabled next">sonraki &rsaquo;&rsaquo;</span>
+    {% endif %}
+   </div>
+{% endif %}
+  {% else %}
+  <p>{% trans 'Yer imi bulunamadı. Yazık oldu !' %}</p>
+{% endif %}
+

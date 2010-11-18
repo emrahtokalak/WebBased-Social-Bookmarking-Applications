@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %} Etiket:{{ tag_name|escape }}{% endblock %}
+{% block head %} 
+   Etiketlenen /tag'lanan: {{ tag_name|escape }}
+{% endblock %}
+{% block content %}
+  {% include "tag_cloud_page.html" %}
+{% endblock %}

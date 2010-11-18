@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block external %}
+<script type="text/javascript" src="/site_media/flowplayer-3.1.4.min.js"></script>
+{% endblock %} 
+{% block title %}{% trans 'keşfetmeye başla !' %}{% endblock %} 
+{% block content %}
+
+<h3> Keşfetmeye başla ! </h3>
+
+
+
+
+
+<a  
+			 href="/site_media/tour.avi"  
+			 style="display:block;width:520px;height:330px"  
+			 id="player"> 
+			 <script>
+			flowplayer("player", "../flowplayer-3.1.5.swf");
+		</script>
+		</a> 
+	
+		<!-- this will install flowplayer inside previous A- tag. -->
+		
+
+
+{% endblock %} 
+

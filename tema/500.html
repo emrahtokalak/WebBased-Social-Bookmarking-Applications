@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="/">{% trans "Anasayfa" %}</a> &rsaquo; {% trans "Server hatası" %}</div>{% endblock %}
+
+{% block title %}{% trans 'Server hatası (500)' %}{% endblock %}
+
+{% block content %}
+<h1>{% trans 'Server Hatası <em>(500)</em>' %}</h1>
+<p>{% trans "Bu bir hata sayfasıdır. Hatayı site yöneticisine eposta ile bildirirseniz en yakın zamanda sorun çözülücektir. Sabrınız için teşekkürler." %}</p>
+
+{% endblock %}

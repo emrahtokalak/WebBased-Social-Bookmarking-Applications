@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "İşaretlediğiniz için teşekkürler" %}.{% endblock %}
+
+{% block content %}
+  <p>{% trans "Yorumun bildirildi. Değerli vaktinizi sitemizde harcadığınız için teşekkür ederiz." %}.</p>
+  <a href="/bookmark/{{ comment.object_pk }}/">Yorum sayfasına git</a>
+{% endblock %}

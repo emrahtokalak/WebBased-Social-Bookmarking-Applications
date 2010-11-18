@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Anasayfa {% endblock %}
+<div class="mainpage"
+{% block head %}Hi ! LikedFeed {% endblock %}
+{% block content %}
+    {% if user.username %}
+        <p>Hoş geldin la {{ user.username }}!
+         Hoş geldiniz, Yerimlerinizi kolayca saklayabilirsiniz. 
+         Çok yakında yeni özelliklerimizle karşınızdayız.</p>
+    {% else %}
+        <p>Hoş geldin, Seni tanıyamadım !
+        Önce <a href="/login/">Giriş</a> yap, Ardından kolayca yerimlerini saklayıp, paylaşabilirsin.</p>
+    {% endif %}
+    <h2> Kullanıcılar tarafından paylaşılanlar</h2>
+    {% include 'shared_bookmark_list.html' %}
+    </div>
+{% endblock %}

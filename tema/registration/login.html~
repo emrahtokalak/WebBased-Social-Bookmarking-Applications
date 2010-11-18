@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Kullanıcı girişi{% endblock %}
+{% block head %}İnsan Girişi / Robotlara hayır !{% endblock %}
+{% block content %}
+   {% if form.has_errors %}
+     <p>Girdiklerin eşleşmedi. Bir zahmet tekrar dene. Sınırsız deneme hakkın var wuhahah</p>
+   {% endif %}
+  
+    <form method="post" action=".">
+     <p><label for="id_username">Kullanıcı Adı:</label>
+        {{ form.username }}</p>
+     <p><label for="id_password">Çok gizli şifren:</label>
+        {{ form.password }}</p> 
+      <a href="/password_reset/">Şifre sıfırlama</a> <input type="submit" value="Gir" />     
+      <input type="hidden" name="next" value="/" />
+      </form>
+	 
+	
+{% endblock %}

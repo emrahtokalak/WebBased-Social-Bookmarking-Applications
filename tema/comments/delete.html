@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Remove a comment" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Yorumu gerçekten silmek istiyormusunuz?" %}</h1>
+  <blockquote>{{ comment|linebreaks }}</blockquote>
+  <form action="." method="post">
+    {% if next %}<input type="hidden" name="next" value="{{ next }}" id="next" />{% endif %}
+    <p class="submit">
+    <input type="submit" name="submit" value="{% trans "sil" %}" /> yada <a href="/bookmark/{{ comment.object_pk }}/">geri dön</a>
+    </p>
+  </form>
+{% endblock %}

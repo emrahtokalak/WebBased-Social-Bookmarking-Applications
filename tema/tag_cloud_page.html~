@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %} Etiket Bulutu{% endblock %}
+{% block head %} Etiket Bulutu {% endblock %}
+{% block context %}
+  <div id="tag-cloud">
+    {% for tag in tags %}
+      <a href="/tag/{{ tag.name|urlencode }}/"
+           class="tag-cloud- {{ tag.weight }}">
+          {{ tag.name|escape }}</a>
+    {% endfor %}
+  </div>
+{% endblock %} 

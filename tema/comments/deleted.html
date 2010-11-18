@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Yorum silindi." %}.{% endblock %}
+
+{% block content %}
+  <p>{% trans "Yorumunuz silindi. Değerli vaktinizi sitemizde harcadığınız için teşekkür ederiz." %}.</p>
+  <a href="/bookmark/{{ comment.object_pk }}/">Yorum sayfasına git</a>
+{% endblock %}
