@@ -1,0 +1,17 @@
+
+
+
+Bookmarking applications
+************************
+
+
+installation
+************
+
+- get the archive
+- run python manage.py syncdb
+- run python manage.py runserver
+
+and live on localhost:8000
+
+
